@@ -1,0 +1,112 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #000;
+    color: #fff;
+  }
+
+#game-container {
+    text-align: center;
+}
+
+#grid {
+    position: relative;
+    width: 480px; /* 15 cells of 32px each */
+    height: 480px;
+    background-color: #222;
+    display: grid;
+    grid-template-columns: repeat(15, 1fr);
+    grid-template-rows: repeat(15, 1fr);
+    border: 2px solid #444;
+}
+
+.cell {
+    width: 32px;
+    height: 32px;
+    background-color: #444;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    background-color: yellow;
+    border-radius: 50%;
+}
+
+.pacman {
+    width: 30px;
+    height: 30px;
+    background-color: yellow;
+    border-radius: 50%;
+    position: absolute;
+    transition: transform 0.2s linear;
+}
+
+.ghost {
+    width: 30px;
+    height: 30px;
+    background-color: red; /* Ghost's color */
+    border-radius: 50%;
+    position: absolute;
+    box-shadow: 0 0 10px red, 0 0 20px red; /* Ghost's glowing effect */
+    transition: transform 0.2s linear;
+}
+
+.wall {
+    background-color: #0033cc; /* Deep blue wall color */
+    border-radius: 6px; /* Rounded edges for a classy look */
+    box-shadow: 0 0 10px #0073e6, 0 0 20px #0073e6; /* Glowing effect */
+    background: linear-gradient(135deg, #0033cc, #0073e6);
+}
+
+/* Optional: Glow effect for the game grid */
+#grid {
+    box-shadow: 0 0 15px #ffcc00, 0 0 30px #ffcc00;
+}
+
+#message {
+    position: fixed;   /* Position the message relative to the screen */
+    top: 20px;         /* Adjust this to move it down from the top */
+    left: 50%;         /* Center the message horizontally */
+    transform: translateX(-50%); /* Center it exactly */
+    text-align: center;   /* Center text inside the message */
+    font-size: 26px;      /* Make the font large enough */
+    font-weight: bold;    /* Bold the text for emphasis */
+    color: #0073e6;       /* Red color for visibility */
+    text-shadow: 
+        -1px -1px 0 #000,  
+         1px -1px 0 #000,
+        -1px  1px 0 #000,
+         1px  1px 0 #000;
+    background: linear-gradient(135deg, #ee5454, #f78484);
+    background-color: rgba(0, 0, 0, 0.7);  /* Semi-transparent background */
+    padding: 15px 30px;        /* Padding around the text */
+    border-radius: 8px;   /* Round the corners */
+    z-index: 10;          /* Ensure it’s above other elements */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    max-width: 80%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    animation: slideIn 0.3s ease-out;
+  }
+  
+@keyframes slideIn {
+    from {
+        transform: translate(-50%, -100%);
+        opacity: 0;
+    }
+    to {
+        transform: translate(-50%, 0);
+        opacity: 1;
+    }
+}

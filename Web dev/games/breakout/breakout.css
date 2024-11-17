@@ -1,0 +1,59 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    flex-direction: column; /* Arrange children vertically */
+    justify-content: flex-start;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to right, #6a11cb, #281496 , #2575fc); /* Gradient background */
+    color: #fff;
+    overflow: hidden; /* Prevents scrollbars */
+}
+
+h1 {
+    font-size: 2rem;
+    text-align: center;
+    color: #4bcdbc;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    padding: 0;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Subtle text shadow */
+    background: linear-gradient(45deg, #4bcdbc, #2edb85);
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+#game-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.5); /* Adds a soft shadow around the game container */
+    border-radius: 15px; /* Rounded corners */
+    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent dark background */
+    padding: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+}
+
+canvas {
+    background-color: #222;
+    border: 1px solid #fff;
+    display: block;
+    border-radius: 10px; /* Rounded corners for the canvas */
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* Soft glowing effect around the canvas */
+    transition: all 0.3s ease;
+}
+
+canvas:hover {
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.7);
+    transform: scale(1.01);
+}

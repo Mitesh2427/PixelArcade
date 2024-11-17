@@ -1,0 +1,161 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100vh;
+}
+
+.header {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    padding: 20px;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.nav-btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    font-size: 1rem;
+    margin-left: 10px;
+    margin-right: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.nav-btn:hover {
+    background-color: #45a049;
+}
+
+.dropdown {
+    position: center;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 30px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border-radius: 5px;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-size: 1rem;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Main Game Styles */
+.container {
+    text-align: center;
+    margin-top: 80px;
+}
+
+#scoreboard {
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 5px;
+    justify-content: center;
+    margin-bottom: 40px; /* Add space for message */
+}
+
+.cell {
+    width: 100px;
+    height: 100px;
+    background-color: #fff;
+    border: 2px solid #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.cell:hover {
+    background-color: #f0f0f0;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.game-message {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    width: 100%;
+    max-width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    display: none;  /* Initially hidden */
+}
+
+/* Styling for win message */
+.win-message {
+    background-color: #4caf50;  /* Green for win */
+    color: white;
+}
+
+/* Styling for draw message */
+.draw-message {
+    background-color: #ff9800;  /* Orange for draw */
+    color: white;
+}

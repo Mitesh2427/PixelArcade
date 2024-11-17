@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <title>Game Hub</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Background div for the image -->
+    <div class="background"></div>
+
+    <!-- Main content -->
+    <h1 class="text-stroke"><span>Welcome to Game Hub</span></h1>
+
+    <div class="game-grid" role="list">
+        <div class="game-tile" role="listitem" onclick="loadGame('games/pacman/pacman.html')" aria-label="Play Pac-Man">
+            <img src="images/pac_man.png" alt="Pac-Man game preview">
+            <div class="hover-name">Pac-Man</div>
+        </div>
+        <div class="game-tile" role="listitem" onclick="loadGame('games/breakout/breakout.html')" aria-label="Play Breakout">
+            <img src="images/break_out.png" alt="Breakout game preview">
+            <div class="hover-name">Breakout</div>
+        </div>
+        <div class="game-tile" role="listitem" onclick="loadGame('games/xo/xo.html')" aria-label="Play Tic Tac Toe">
+            <img src="images/tic_tac.jpeg" alt="tic tac toe preview">
+            <div class="hover-name">Tic Tac Toe</div>
+        </div>
+        <div class="game-tile" role="listitem" onclick="loadGame('games/dino run/dino.html')" aria-label="Play Dino Run">
+            <img src="images/dino.png" alt="Dino Run game preview">
+            <div class="hover-name">Dino Run</div>
+        </div>
+    </div>
+    
+
+    <!-- JavaScript to load games -->
+    <script>
+        function loadGame(gameUrl) {
+            window.location.href = gameUrl;
+        }
+    </script>
+</body>
+</html>
